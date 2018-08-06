@@ -59,4 +59,23 @@ Now in the Terminals you can observe the logs describing the communication betwe
 Also you can run the tests, lint, build etc. from the Terminal, e.g.:
 ```shell
 make all
+make grpc
+make test
+...
+```
+
+If you press <Ctrl + C> in each Terminal, you will see something like the following (Graceful shutdown):
+
+```shell
+# Terminal #1:
+2018/08/07 01:49:53 Signal: interrupt
+2018/08/07 01:49:53 Terminating persistence service in 3 s
+2018/08/07 01:49:54 Terminating persistence service in 2 s
+2018/08/07 01:49:55 Terminating persistence service in 1 s
+
+# Terminal #2:
+2018/08/07 01:49:51 Signal: interrupt
+2018/08/07 01:49:51 Terminating services service in 3 s
+2018/08/07 01:49:52 Terminating services service in 2 s
+2018/08/07 01:49:53 Terminating services service in 1 s
 ```
