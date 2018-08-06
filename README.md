@@ -10,8 +10,8 @@ Features:
 
 ## How to launch the application
 
-Start PostgreSQL database server. In the PostgreSQL database named `postgres` (it is a default one) execute the SQL statements given in the file `migrate/migration.sql`.
-Database connection information (see file `config/app.yaml`):
+Start PostgreSQL database server. In the PostgreSQL database named `postgres` (it is a default one) execute the SQL statements given in the file `db/migration.sql`.
+Database connection information:
 * server address: `127.0.0.1` (localhost)
 * server port: `5432`
 * database name: `postgres`
