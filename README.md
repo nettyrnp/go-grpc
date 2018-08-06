@@ -40,14 +40,11 @@ Now in the Terminals you can observe the logs describing the communication betwe
 2018/08/07 01:49:43 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (33, 'Damian', 'dolor@cursus.com', '(+44)01699955892')
 2018/08/07 01:49:43 sql: UPDATE public.people SET name='Damien', email='dolor@cursus.com', mobile_number='(+44)01699955892' WHERE id=33
 ...
-2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (88, 'Lev', 'porttitor.vulputate@velitegetlaoreet.ca
-', '(+44)0138796288')
-2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (89, 'Clark', 'commodo.at@sagittisDuisgravida.net',
-'(+44)01168557827')
+2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (88, 'Lev', 'porttitor.vulputate@velitegetlaoreet.ca', '(+44)0138796288')
+2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (89, 'Clark', 'commodo.at@sagittisDuisgravida.net', '(+44)01168557827')
 ...
 # should print a list of executed sql queries
 
-```shell
 # Terminal #2:
 2018/08/07 01:49:41 Reading: loaded 39 non-duplicate lines
 2018/08/07 01:49:41 Saving: created 38, updated 1 records in DB
@@ -57,3 +54,4 @@ Now in the Terminals you can observe the logs describing the communication betwe
 2018/08/07 01:49:43 Saving: created 22, updated 0 records in DB
 ...
 # should print the stats on Reading the CSV file & Saving to DB operations
+```
