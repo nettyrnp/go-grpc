@@ -56,14 +56,6 @@ Now in the Terminals you can observe the logs describing the communication betwe
 # should print the stats on Reading the CSV file & Saving to DB operations
 ```
 
-Also you can run the tests, lint, build etc. from the Terminal, e.g.:
-```shell
-make all
-make grpc
-make test
-...
-```
-
 If you press <Ctrl + C> in each Terminal, you will see something like the following (Graceful shutdown):
 
 ```shell
@@ -78,4 +70,18 @@ If you press <Ctrl + C> in each Terminal, you will see something like the follow
 2018/08/07 01:49:51 Terminating services service in 3 s
 2018/08/07 01:49:52 Terminating services service in 2 s
 2018/08/07 01:49:53 Terminating services service in 1 s
+```
+
+Also you can run the tests, lint, build etc. from the Terminal, e.g.:
+```shell
+make all
+make grpc
+make test
+...
+```
+
+Launching all the services (including Postgres) via docker-compose is also possible, but needs some tuning:
+```shell
+docker-compose up
+...
 ```
