@@ -55,3 +55,8 @@ Now in the Terminals you can observe the logs describing the communication betwe
 ...
 # should print the stats on Reading the CSV file & Saving to DB operations
 ```
+
+Also you can run the tests, lint, build etc. from the Terminal, e.g.:
+```shell
+make all
+```
