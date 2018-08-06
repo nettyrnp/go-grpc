@@ -37,7 +37,10 @@ Now in the Terminals you can observe the logs describing the communication betwe
 
 ```shell
 # Terminal #1:
-2018/08/07 01:49:43 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (88, 'Lev', 'porttitor.vulputate@velitegetlaoreet.ca
+2018/08/07 01:49:43 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (33, 'Damian', 'dolor@cursus.com', '(+44)01699955892')
+2018/08/07 01:49:43 sql: UPDATE public.people SET name='Damien', email='dolor@cursus.com', mobile_number='(+44)01699955892' WHERE id=33
+...
+2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (88, 'Lev', 'porttitor.vulputate@velitegetlaoreet.ca
 ', '(+44)0138796288')
 2018/08/07 01:49:44 sql: INSERT INTO public.people(id, name, email, mobile_number) VALUES (89, 'Clark', 'commodo.at@sagittisDuisgravida.net',
 '(+44)01168557827')
