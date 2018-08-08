@@ -16,7 +16,7 @@ import (
 )
 
 const (
-	address = "localhost:50502"
+	address = "localhost:50502" // TODO: Move to config file
 )
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 	signal.Notify(signals, syscall.SIGTERM)
 
 	go func() {
-		fname := "db/data.csv"
+		fname := "db/data.csv" // TODO: Move to config file
 		var offset = 0
 		limit := 40 // max lines to load
 
@@ -97,7 +97,7 @@ func main() {
 	// Gracefully terminate
 	i := 3
 	for i > 0 {
-		log.Printf("Terminating services service in %d s\n", i)
+		log.Printf("Terminating ingestor service in %d s\n", i)
 		time.Sleep(1 * time.Second)
 		i = i - 1
 	}

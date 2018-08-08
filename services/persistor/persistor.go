@@ -4,7 +4,6 @@ import (
 	"log"
 	"net"
 
-	"fmt"
 	"github.com/nettyrnp/go-grpc/db"
 	pb "github.com/nettyrnp/go-grpc/proto"
 	"github.com/nettyrnp/go-grpc/util"
@@ -31,10 +30,9 @@ func (s *server) SavePersons(ctx context.Context, in *pb.PersonsReq) (*pb.Person
 	db.ResetDB()
 	people := fromProto(in.Persons)
 	for _, p := range people {
-		//fmt.Println("received p:", p)
 		c1, c2, err := db.SaveRecord(p)
 		if err != nil {
-			panic(fmt.Errorf("Error while saving record to database: %s", err))
+			log.Fatalf("Error while saving record to database: %s", err)
 		}
 		repl.CreatedCount += c1
 		repl.UpdatedCount += c2
@@ -45,7 +43,6 @@ func (s *server) SavePersons(ctx context.Context, in *pb.PersonsReq) (*pb.Person
 func fromProto(people []*pb.Person) []util.Person {
 	var people2 []util.Person
 	for _, p := range people {
-		//fmt.Println("p:", p.ToString())
 		people2 = append(people2, util.Person{
 			Id:           p.Id,
 			Name:         p.Name,

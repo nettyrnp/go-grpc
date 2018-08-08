@@ -15,10 +15,10 @@ const (
 )
 
 type Person struct {
-	Id           int32  `json:"Id"`
-	Name         string `json:"Name"`
-	Email        string `json:"Email"`
-	MobileNumber string `json:"MobileNumber"`
+	Id           int32
+	Name         string
+	Email        string
+	MobileNumber string
 }
 
 func (p Person) ToString() string {

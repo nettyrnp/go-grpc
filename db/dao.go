@@ -21,14 +21,13 @@ func init() {
 	var err error
 	DB, err = dbx.MustOpen("postgres", "postgres://postgres:postgres@127.0.0.1:5432/postgres?sslmode=disable")
 	if err != nil {
-		panic(err)
+		log.Fatalf("Error while connecting to database: %s", err)
 	}
 }
 
-// Re-create the database schema. This method is used in tests.
 func ResetDB() *dbx.DB {
 	if err := runSQLFile(DB, getSQLFile()); err != nil {
-		panic(fmt.Errorf("Error while initializing database: %s", err))
+		log.Fatalf("Error while initializing database: %s", err)
 	}
 	return DB
 }
